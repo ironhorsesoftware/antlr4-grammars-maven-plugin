@@ -16,18 +16,14 @@ import java.io.IOException;
  * Goal which touches a timestamp file.
  */
 @Mojo( name = "touch", defaultPhase = LifecyclePhase.PROCESS_SOURCES )
-public class MyMojo
-    extends AbstractMojo
-{
+public class MyMojo extends AbstractMojo {
     /**
      * Location of the file.
      */
     @Parameter( defaultValue = "${project.build.directory}", property = "outputDir", required = true )
     private File outputDirectory;
 
-    public void execute()
-        throws MojoExecutionException
-    {
+    public void execute() throws MojoExecutionException {
         File f = outputDirectory;
 
         if ( !f.exists() )
