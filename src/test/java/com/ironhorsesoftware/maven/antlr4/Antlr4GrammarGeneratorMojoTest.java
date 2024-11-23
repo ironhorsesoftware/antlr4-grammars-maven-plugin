@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import java.io.File;
 
-public class MyMojoTest
+public class Antlr4GrammarGeneratorMojoTest
 {
     @Rule
     public MojoRule rule = new MojoRule()
@@ -36,7 +36,7 @@ public class MyMojoTest
         assertNotNull( pom );
         assertTrue( pom.exists() );
 
-        MyMojo myMojo = ( MyMojo ) rule.lookupConfiguredMojo( pom, "touch" );
+        Antlr4GrammarGeneratorMojo myMojo = ( Antlr4GrammarGeneratorMojo ) rule.lookupConfiguredMojo( pom, "touch" );
         assertNotNull( myMojo );
         myMojo.execute();
 

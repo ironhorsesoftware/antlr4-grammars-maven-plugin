@@ -16,11 +16,11 @@ import java.io.IOException;
  * Goal which touches a timestamp file.
  */
 @Mojo( name = "touch", defaultPhase = LifecyclePhase.PROCESS_SOURCES )
-public class MyMojo extends AbstractMojo {
+public class Antlr4GrammarGeneratorMojo extends AbstractMojo {
     /**
      * Location of the file.
      */
-    @Parameter( defaultValue = "${project.build.directory}", property = "outputDir", required = true )
+    @Parameter( defaultValue = "${basedir}/src/main/antlr4/imports", property = "outputDir", required = true )
     private File outputDirectory;
 
     public void execute() throws MojoExecutionException {
